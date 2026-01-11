@@ -4,8 +4,8 @@ pre-commit:
   commands:
     eslint:
       glob: '*'
-      run: pnpm eslint --cache --fix {staged_files}
-
+      run: pnpm eslint --no-warn-ignored --cache --fix {staged_files}
+      
 commit-msg:
   commands:
     commitlint:
