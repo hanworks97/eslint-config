@@ -1,6 +1,6 @@
-import stackou from './dist/index.js'
+import hanworks from './dist/index.js'
 
-export default stackou({
+export default hanworks({
   formatters: true,
 }, {
   rules: {

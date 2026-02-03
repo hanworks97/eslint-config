@@ -1,7 +1,7 @@
 {
-  "name": "@stackou/eslint-config",
+  "name": "@hanworks/eslint-config",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "pnpm@10.15.0",
   "description": "Hanworks ESLint config",
   "author": "Hanworks <khan97z.miao@gmail.com> (https://github.com/hanworks97/)",
@@ -35,9 +35,8 @@
   "scripts": {
     "build": "rollup -c",
     "postinstall": "npm run build",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "commit": "czg"
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "peerDependencies": {
     "@antfu/eslint-config": ">=4.15.0",
@@ -59,14 +58,19 @@
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^0.4.4",
-    "@stackou/commitlint-config": "^1.0.0",
-    "czg": "^1.12.0",
     "eslint": "^9.29.0",
     "eslint-plugin-format": "^1.0.2",
-    "lefthook": "^2.0.13",
+    "lint-staged": "^16.2.7",
     "rollup": "^4.34.1",
     "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-delete": "^3.0.1",
-    "rollup-plugin-typescript2": "^0.36.0"
+    "rollup-plugin-typescript2": "^0.36.0",
+    "simple-git-hooks": "^2.13.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }

@@ -1,22 +1,22 @@
-# @stackou/eslint-config
+# @hanworks/eslint-config
 
 这是我个人的 ESLint 配置预设。它是基于 @antfu/eslint-config 的。我做了一些调整以符合个人喜好。
 
 ## 安装
 
-在你的项目中安装 `@stackou/eslint-config` 包：
+在你的项目中安装 `@hanworks/eslint-config` 包：
 
 ```bash
-pnpm add -D eslint @stackou/eslint-config
+pnpm add -D eslint @hanworks/eslint-config
 ```
 
 在你的项目根目录下创建 eslint.config.js：
 
 ```js
 // eslint.config.js
-import stackou from '@stackou/eslint-config'
+import hanworks from '@hanworks/eslint-config'
 
-export default stackou()
+export default hanworks()
 ```
 
 ## 用法
@@ -29,9 +29,9 @@ export default stackou()
 
 ```js
 // eslint.config.js
-import stackou from '@stackou/eslint-config'
+import hanworks from '@hanworks/eslint-config'
 
-export default stackou({
+export default hanworks({
   /**
    * 是否启用tailwindcss
    */
@@ -58,8 +58,8 @@ export default stackou({
 ```json
 {
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   }
 }
 ```
